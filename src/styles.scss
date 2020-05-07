@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import "/Users/ptulsyan/Documents/Angular Projects/covid19/covid_prm_ptk/covid19/node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "/Users/ptulsyan/Documents/Angular Projects/covid19/covid_prm_ptk/covid19/node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/_ag-theme-alpine-mixin.scss";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.ag-theme-alpine {
+    @include ag-theme-alpine();
+}
