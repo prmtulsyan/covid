@@ -5,10 +5,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CovidService {
-  httpUrl = 'https://api.covid19india.org/data.json';
+  url = 'https://api.covid19india.org/'
   constructor(private http: HttpClient) { }
 
   getStateData() {
-    return this.http.get(this.httpUrl);
+    return this.http.get(this.url + 'data.json');
   }
+
+  getStateDaily() {
+    return this.http.get(this.url + 'states_daily.json');
+  }
+
 }

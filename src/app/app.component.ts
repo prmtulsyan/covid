@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
   states;
   selectedStateId;
   selectedState;
+  selectedStateCode = 'TT';
+
   constructor(private covidService: CovidService) {}
 
 ngOnInit() {
@@ -23,9 +25,9 @@ ngOnInit() {
 }
 
 onSubmit(selectedStateId) {
-  this.selectedStateId = selectedStateId.value.stateId;
-  this.selectedState = this.states[this.selectedStateId];
-  console.log(this.selectedState);
+  this.selectedStateId = selectedStateId;
+  this.selectedState = this.states[selectedStateId];
+  this.selectedStateCode = this.selectedState['statecode'];
 }
 
 }

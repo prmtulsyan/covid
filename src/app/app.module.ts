@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { StateTableComponent } from './state-table/state-table.component';
 import { LinechartComponent } from './linechart/linechart.component';
+import { CardsComponent } from './cards/cards.component';
 
 
 
@@ -19,7 +20,8 @@ import { LinechartComponent } from './linechart/linechart.component';
     AppComponent,
     StateTableComponent,
     PieChartComponent,
-    LinechartComponent
+    LinechartComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

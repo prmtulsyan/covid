@@ -21,23 +21,23 @@ export class PieChartComponent implements OnInit {
     .subscribe(data => {
       this.dropDown = data;
       this.myPieChart = new Chart('canvaspie', {
-        type: 'pie',
+        type: 'doughnut',
         data: {
           datasets: [{
               data: [data['statewise'][this.selectedStateId]['active'], data['statewise'][this.selectedStateId]['recovered'], data['statewise'][this.selectedStateId]['deaths']],
               borderColor: '#3cba9f',
               backgroundColor: [
-                "#3cb371",
-                "#0000FF",
-                "#9966FF",
-                "#4C4CFF",
-                "#00FFFF",
-                "#f990a7",
-                "#aad2ed",
-                "#FF00FF",
-                "Blue",
-                "Red",
-                "Blue"
+                '#3cb371',
+                '#0000FF',
+                '#9966FF',
+                '#4C4CFF',
+                '#00FFFF',
+                '#f990a7',
+                '#aad2ed',
+                '#FF00FF',
+                'Blue',
+                'Red',
+                'Blue'
               ],
               fill: true
           }],
@@ -50,6 +50,21 @@ export class PieChartComponent implements OnInit {
           ]
       },
         options: {
+          maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: true
+    },
+    cutoutPercentage: 80,
         }
     });
     });

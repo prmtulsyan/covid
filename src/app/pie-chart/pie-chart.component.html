@@ -1,3 +1,16 @@
-<div *ngIf="myPieChart">
-  <canvas id="canvaspie" style= "display: block; height: 150; width: 250;">{{ myPieChart }}</canvas>
-</div>
+
+
+<div class="card shadow mb-4">
+    <!-- Card Header - Dropdown -->
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">Pie Chart</h6>
+    </div>
+    <!-- Card Body -->
+    <div class="card-body">
+      <div class="chart-pie pt-4 pb-2">
+          <div *ngIf="myPieChart">
+              <canvas id="canvaspie" style= "display: block; height: 250; width: 300;">{{ myPieChart }}</canvas>
+            </div>
+      </div>
+    </div>
+  </div>
